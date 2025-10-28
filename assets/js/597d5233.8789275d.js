@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_documentation=globalThis.webpackChunkmy_documentation||[]).push([[3591],{6126:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/my-docs-portal/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
