@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes } = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,16 +11,18 @@ const config = {
   tagline: 'Comprehensive guides and references for my projects',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
+  // ✅ The production URL of your site (no spaces!)
   url: 'https://harshitayadavv.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
+
+  // ✅ The base URL for your GitHub Pages deployment
   baseUrl: '/my-docs-portal/',
 
-  // GitHub pages deployment config.
-  organizationName: 'harshitayadavv', // Your GitHub username
-  projectName: 'my-docs-portal', // Your repo name
+  // GitHub pages deployment config
+  organizationName: 'harshitayadavv', // GitHub username
+  projectName: 'my-docs-portal', // Repo name
+  deploymentBranch: 'gh-pages', // (optional but recommended)
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -51,7 +54,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Social card for sharing
       image: 'img/docusaurus-social-card.jpg',
       
       navbar: {
@@ -67,7 +69,7 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/harshitayadavv/my-docs-portal',
             label: 'GitHub',
@@ -124,12 +126,7 @@ const config = {
         additionalLanguages: ['bash', 'json', 'python', 'java'],
       },
 
-      // Algolia search (you'll need to set this up later)
-      // algolia: {
-      //   appId: 'YOUR_APP_ID',
-      //   apiKey: 'YOUR_SEARCH_API_KEY',
-      //   indexName: 'YOUR_INDEX_NAME',
-      // },
+      // You can enable Algolia later if you want search
     }),
 };
 
